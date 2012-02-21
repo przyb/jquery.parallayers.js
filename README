@@ -1,0 +1,47 @@
+JQUERY.PARALLAYERS.JS
+by Jakub Przyborowski
+www.przyborowski.info
+www.przyb.net
+v: 0.1
+
+Parallayers gives you simple solution to create parallax effect bound to mouse movement.
+It's extremally lightweight - 3kb minified! Oh yeah.
+To start using it, create some relative or absolute positioned div, and fill it with layers.
+Each layer should be absolutely positioned block element, such as div, having class called "layer".
+For example - some markup:
+
+<div id="parallax-wrapper">
+	<div class="layer layer-1"></div>
+	<div class="layer layer-2"></div>
+	<div class="layer layer-3"></div>
+<div>
+
+and CSS:
+#parallax-wrapper { width: 600px; height: 450px; position: relative; }
+.layer { width: 600px; height: 450px; position: absolute; }
+
+Now you can apply parallayers on it. Simpliest example is:
+
+$('#parallax-wrapper').parallayers({
+	'layer-1' : { x : -25, y : -5 },
+	'layer-2' : { x : 0, y : 0 },
+	'layer-3' : { x : 25, y : 5 }
+});
+
+Possible options for layer are:
+x - max horizontal movement (in pixels)
+y - max vertical movement (in pixels)
+
+Parallayers is also 3d transforms enabled. Since css 3d transforms are not bundled out-of-box in jquery,
+it is dependant on jquery.transit.js - cute piece of code, which enables css transforms and transitions
+in jquery. And it's 2kb minified :) Transit is available here: http://ricostacruz.com/jquery.transit/
+With transit attached, additional layer options are:
+rotateX - layer rotation over X axis
+rotateY - layer rotation over Y axis
+rotateZ - layer rotation over Z axis (similar to css3 "rotate()")
+Notice, that css 3d transforms are available currently only on newest versions of Gecko
+and Webkit based browsers.
+
+More features are covered in "demos".
+
+Cheers, Przyb

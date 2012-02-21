@@ -1,0 +1,32 @@
+.clearfix:before, .clearfix:after {  content: "\0020"; display: block; height: 0; overflow: hidden;  }  
+.clearfix:after {  clear: both;  }  
+.clearfix {  zoom: 1;  }
+
+.left { float: left; }
+
+body { font-family: 'Arial'; font-size: 1em; color: #333; }
+.wrapper { width: 600px; height: 450px; border: 1px solid #cacaca; position: relative; margin-right: 15px; }
+.layer { width: 600px; height: 450px; position: absolute; top: 0; left: 0; }
+.circle { position: absolute; }
+.circle.small { width: 30px; height: 30px; border-radius: 15px; background: rgba(0,0,0,0.3); }
+.circle.medium { width: 60px; height: 60px; border-radius: 30px; background: rgba(0,0,0,0.4); }
+.circle.big { width: 100px; height: 100px; border-radius: 50px; background: rgba(0,0,0,0.5); }
+.circle.circle-1 { top: 50px; left: 180px; }
+.circle.circle-2 { top: 80px; left: 80px; }
+.circle.circle-3 { top: 85px; left: 500px; }
+.circle.circle-4 { top: 350px; left: 400px; }
+.circle.circle-5 { top: 400px; left: 280px; }
+.circle.circle-6 { top: 120px; left: 100px; }
+.circle.circle-7 { top: 250px; left: 250px; }
+.circle.circle-8 { top: 300px; left: 100px; }
+.circle.circle-9 { top: 180px; left: 350px; }
+.square { position: absolute; width: 500px; height: 220px; top: 50%; left: 50%; margin-top: -110px; margin-left: -250px; background: rgba(150,150,150,0.8); }
+
+.buttons button { margin: 5px; }
+#button-enable { display: inline-block; }
+#button-disable { display: none; }
+.parallax-enabled #button-enable { display: none; }
+.parallax-enabled #button-disable { display: inline-block; }
+
+.code { border: 1px solid #cacaca; width: 530px; padding: 10px; margin: 0; }
+.info { margin-top: 10px; font-size: 13px; font-style: italic; }
